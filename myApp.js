@@ -17,7 +17,7 @@ var app = express();              // Do Not Edit
 // Express apps by setting various HTTP headers.
 // Install the package, then require it.
 
-var helmet = require('helmet');
+var helmet = require("helmet");
 
 /** 2) Hide potentially dangerous information - `helmet.hidePoweredBy()` */
 
@@ -30,7 +30,7 @@ var helmet = require('helmet');
 // people off. e.g. `helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' })`
 
 // Use `helmet.hidePoweredBy()``
-
+app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }));
 
 
 /** 3) Mitigate the risk of clickjacking - `helmet.frameguard()` */
